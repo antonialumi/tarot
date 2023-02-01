@@ -3,7 +3,7 @@ const {log}= console;
 const indiceDeCartas = [
     "El Loco",
     "El Mago",
-    "La Sacerdotiza",
+    "La Sacerdotisa",
     "La Emperatriz",
     "El Emperador",
     "El Papa",
@@ -34,6 +34,9 @@ function generarPorPalo(palo){
         .concat(["Paje","Caballo","Rey","Reina"])
         .map(n=>`${n} de ${palo}`)
 }
+function alerta(){
+    alert("Se apretó el botón")
+}
 
 log({indiceDeCartas})
 
@@ -56,7 +59,7 @@ function esArcanoMenor(posicion){
 // esta funcion devuelve una instancia de CartaTest completamente al azar
 function obtenerCarta(){
     // obtener 1 numero del 0 al 155
-    max = 156
+    max = 22
     const numeroCrudo = Math.random();
     log({numeroCrudo})
     const numeroCartaDecimal = numeroCrudo * max
