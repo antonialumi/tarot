@@ -34,9 +34,8 @@ function generarPorPalo(palo){
         .concat(["Paje","Caballo","Rey","Reina"])
         .map(n=>`${n} de ${palo}`)
 }
-function alerta(){
-    alert("Se apretó el botón")
-}
+
+
 
 log({indiceDeCartas})
 
@@ -45,6 +44,10 @@ class Carta {
         this.nombre = indiceDeCartas[posicion]
         this.arcano = esArcanoMayor(posicion) ? "mayor" : "menor"
         this.orientacion = estaAlDerecho ? "al derecho" : "al reves"
+    }
+    traerRutaALaImagen(){
+        const nombre = this.nombre.replaceAll(" " , "-").toLowerCase()
+        return `./images/${nombre}.jpg`
     }
 }
 
